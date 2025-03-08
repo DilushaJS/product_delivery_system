@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add or Update Delivery Tracking Details</title>
+    <style>
+		body {
+				background-color: white;
+				background-image: url('back2.jpg');
+				background-size: 100%;
+				background-position: top left;
+				background-repeat: no-repeat;
+				margin: 0;
+				padding: 0;
+				font-family: Arial, sans-serif;
+			}
+        form label {
+			display: block;
+			font-size: 30px;
+            margin-bottom: 20px;
+		}
+        form input[type="text"], form input[type="date"] {
+			width:318px;
+			height:37px;
+			font-size: 1em;
+			border-radius: 5px;
+			border: 1px solid black;
+			margin-bottom: 20px;
+            margin-left: 30px;
+  			border-radius: 90px;
+		}
+        form input[type="submit"]{
+            width:150px;
+			height:37px;
+			font-size: 20px;
+			border-radius: 5px;
+			border: 1px solid black;
+			margin-bottom: 20px;
+            margin-left: 100px;
+  			border-radius: 90px;
+            background-color: blue;
+        }
+        </style>
+</head>
+<body>
+	<h1>Add or Update Delivery Tracking Details</h1>
+        
+	<div style="position: relative; margin-top: 50px; margin-left: 550px;">
+	<form action="add_or_update_delivery.php" method="post">
+		<label for="tracking_number">Tracking Number:</label>
+		<input type="text" id="tracking_number" name="tracking_number" required>
+		<br><br>
+		<label for="expected_deliver_date">Expected Delivery Date:</label>
+		<input type="date" id="expected_deliver_date" name="expected_deliver_date" required>
+		<br><br>
+		<label for="location">Location:</label>
+		<input type="text" id="location" name="location" required>
+		<br><br>
+		<label for="branch_id">Branch ID:</label>
+		<input type="text" id="branch_id" name="branch_id" required>
+		<br><br>
+		<input type="submit" value="Submit">
+	</form>
+    </div>
+</body>
+</html>

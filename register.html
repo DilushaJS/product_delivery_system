@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<title>Register to Door2Door Courier</title>
+	<title>Login</title>
+	<style>
+		body {
+				background-color: white;
+				background-image: url('background.jpg');
+				background-size: 100%;
+				background-position: top left;
+				background-repeat: no-repeat;
+				margin: 0;
+				padding: 0;
+				font-family: Arial, sans-serif;
+			}
+		.container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 130vh;
+			position: sticky;
+			margin-top: 35px;
+			margin-right: 710px;
+		}
+
+		form {	
+			background-color: #ffffffc3;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.3);
+			width: 593px;
+			height: 714px;
+  			border-radius: 60px;
+		}
+
+		form label {
+			display: block;
+			font-size: 1em;
+            margin-top: -25px
+		}
+		form input[type="text"], form input[type="password"],form input[type="email"], textarea {
+			width:468px;
+			height:47px;
+			font-size: 1em;
+			border: 1px solid black;
+			margin-bottom: 20px;
+  			border-radius: 90px;
+			background-color: #ffffff97;
+		}
+		form input[type="submit"] {
+			background-color: #3a36cc;
+			color: black;
+			font-size: 22px;
+			padding: 15px 78px;
+			border: 1px solid black;
+			border-radius: 20px;
+			cursor: pointer;
+			margin-top: 20px;
+			margin-left: 175px;
+		}
+		.menu-container {
+			margin: 20px 0;
+			padding: 0 20px;
+		}
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			position: relative;
+			top: 0;
+			right: 0;
+			margin-top: -1100px;
+			margin-left: 942px;
+		}
+
+		li {
+			display: inline-block;
+			margin-right: 5px;
+			margin-top: 125px;
+		}
+
+		li:last-child {
+			margin-right: 0;
+		}
+
+		a {
+			color: black;
+			text-decoration: none;
+			font-size: 16px;
+			padding: 10px;
+			border-radius: 5px;
+			transition: background-color 0.3s ease;
+		}
+		
+		.wrapper 
+		{
+			margin-top: 850px;
+			margin-left: 1050px;
+		}
+		.wrapper:hover 
+		{
+			margin-left: 1015px;
+		}
+		.wrapper .button{
+			display: inline-block;
+			height: 60px;
+			width: 60px;
+			float: left;
+			margin: 0 5px;
+			overflow: hidden;
+			background: transparent;
+			border-radius: 50px;
+			cursor: pointer;
+			box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+			transition: all 0.3s ease-out;
+		}
+		.wrapper .button:hover
+		{
+			width: 200px;
+			height: 70px;
+		}
+		.wrapper .button .icon
+		{
+			display: inline-block;
+			height: 60px;
+			width: 60px;
+			text-align: center;
+			border-radius: 50px;
+			box-sizing: border-box;
+			line-height: 60px;
+			transition: all 0.3s ease-out;
+			position: relative;
+			background-color: #dec3b5;
+		}
+		.button:hover .icon
+		{
+			height: 60px;
+			width: 60px;
+			background: #dec3b5;
+		}
+		.wrapper .button .icon i{
+			font-size: 25px;
+			line-height: 60px;
+			transition: all 0.3s ease-out;
+		}
+		.wrapper .button:hover .icon i
+		{
+			color: #fff;
+		}
+		.wrapper .button span
+		{
+			font-size: 20px;
+			font-weight: 500;
+			line-height: 60px;
+			margin-left: 10px;
+			transition: all 0.3s ease-out;
+			color: black;
+		}
+		.wrapper .button .icon img 
+		{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	</style>
+	<script>
+		function hoverButtons(buttonIds) {
+		  buttonIds.forEach(id => {
+			document.querySelector(`.button1:nth-child(${id})`).classList.add('hovered');
+		  });
+		}
+		</script>
+</head>
+<body>
+	<div class="container">
+		<form method="post" action="register.php">
+			<div style="position: relative; margin-top: 80px; margin-left: 60px;">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="       Email" style="color: gray;"><br><br>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="       Name" style="color: gray;"><br><br>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required placeholder="       User Name" style="color: gray;"><br><br>
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" cols="50" required placeholder="    Address "  style="color: gray;font-size: 17px;mar: 15px;"></textarea><br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required placeholder="       Password" style="color: gray;"><br><br>
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" id="confirm_password" name="confirm_password" required placeholder="       Password" style="color: gray;"><br><br>
+				<label for="persons">Number of Persons:</label>
+<select id="persons" name="persons" required>
+  <option value="">Select Character</option>
+  <option value="1">Admin</option>
+  <option value="2">Employee</option>
+  <option value="3">Seller</option>
+  <option value="4">Buyer</option>
+</select><br><br>
+
+			</div>
+				<input type="submit" value="Register">
+			</form>
+	</div>
+	<div class="menu-container">
+		<ul>
+			<li><a href="home.html"><b>Home</b></a></li>
+		<li><a href="description/about.html">About</a></li>
+		<li><a href="description/Services.html">Services</a></li>
+		<li><a href="description/WCU.html">Why Choose Us</a></li>
+		<li><a href="description/CU.html">Contact Us</a></li>
+		</ul>
+	</div>
+	<div class="wrapper">
+		<a href="https://www.facebook.com/" target="_blank">
+         <div class="button">
+            <div class="icon">
+				<img src="fb.png" alt="Facebook Icon">
+            </div>
+            <span>Facebook</span>
+         </div>
+		</a>
+		<a href="https://www.Instagram.com/" target="_blank">
+         <div class="button">
+            <div class="icon">
+				<img src="ins.png" alt="Instagram Icon">
+            </div>
+            <span>Instagram</span>
+         </div>
+		</a>
+		<a href="https://www.Twitter.com/" target="_blank">
+         <div class="button">
+            <div class="icon">
+				<img src="tw.png" alt="Twitter Icon">
+            </div>
+            <span>Twitter</span>
+         </div>
+		</a>
+		<a href="https://www.Youtube.com/" target="_blank">
+         <div class="button">
+            <div class="icon">
+				<img src="yt.png" alt="YouTube Icon">
+            </div>
+            <span>YouTube</span>
+         </div>
+		</a>
+      </div>
+</body>
+</html>

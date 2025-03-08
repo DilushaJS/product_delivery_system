@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Employee</title>
+	<style>
+		body {
+			background-color: white;
+			background-image: url('back2.jpg');
+			background-size: 100%;
+			background-position: top left;
+			background-repeat: no-repeat;
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+		}
+		form label {
+			display: block;
+			font-size: 30px;
+			margin-bottom: 20px;
+		}
+		form input[type="text"] {
+			width: 318px;
+			height: 37px;
+			font-size: 1em;
+			border-radius: 5px;
+			border: 1px solid black;
+			margin-bottom: 20px;
+			margin-left: 30px;
+			border-radius: 90px;
+		}
+		form select {
+			width: 318px;
+			height: 37px;
+			font-size: 1em;
+			border-radius: 5px;
+			border: 1px solid black;
+			margin-bottom: 20px;
+			margin-left: 30px;
+			border-radius: 90px;
+		}
+		form input[type="submit"] {
+			width: 150px;
+			height: 37px;
+			font-size: 20px;
+			border-radius: 5px;
+			border: 1px solid black;
+			margin-bottom: 20px;
+			margin-left: 100px;
+			border-radius: 90px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<h1>Add Employee</h1>
+<div style="position: relative; margin-top: 50px; margin-left: 550px;">
+    <form method="post" action="addemployee.php">
+        <label for="emp_id">Employee ID:</label>
+        <input type="text" id="emp_id" name="emp_id"><br><br>
+
+        <label for="emp_name">Employee Name:</label>
+        <input type="text" id="emp_name" name="emp_name"><br><br>
+
+        <label for="designation">Designation:</label>
+        <select id="designation" name="designation" onchange="showHideFields()">
+            <option value="Manager">Manager</option>
+            <option value="Delivery Man">Delivery Man</option>
+        </select><br><br>
+
+        <div id="workingHoursDiv">
+            <label for="working_hours">Working Hours:</label>
+            <select id="working_hours" name="working_hours">
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select><br><br>
+        </div>
+
+        <div id="timeShiftDiv">
+            <label for="time_shift">Time Shift:</label>
+            <select id="time_shift" name="time_shift">
+                <option value="morning">Morning</option>
+                <option value="evening">Evening</option>
+            </select><br><br>
+        </div>
+
+        <input type="submit" value="Add Employee">
+    </form>
+</div>
+
+<script>
+    function showHideFields() {
+        var designation = document.getElementById("designation").value;
+        if (designation == "Delivery Man") {
+            document.getElementById("workingHoursDiv").style.display = "block";
+            document.getElementById("timeShiftDiv").style.display = "block";
+        } else {
+            document.getElementById("workingHoursDiv").style.display = "none";
+            document.getElementById("timeShiftDiv").style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>
