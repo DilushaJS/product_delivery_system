@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<title>Door2Door Courier</title>
+		<link rel="stylesheet" href="socialm.css">
+		<link rel="stylesheet" href="optionlogo.css">
+	<title>Login</title>
+	<style>
+		body {
+				background-color: white;
+				background-image: url('background.jpg');
+				background-size: 100%;
+				background-position: top left;
+				background-repeat: no-repeat;
+				margin: 0;
+				padding: 0;
+				font-family: Arial, sans-serif;
+			}
+		.container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 130vh;
+			position: sticky;
+			margin-top: 27px;
+			margin-right: 1010px;
+		}
+
+		form {	
+			background-color: rgb(255, 255, 255);
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.3);
+			width: 393px;
+			height: 514px;
+  			border-radius: 60px;
+			  display: inline-block;
+  margin-right: 20px;
+		}
+
+		form label {
+			display: block;
+			font-size: 1em;
+			margin-bottom: 10px;
+		}
+		form input[type="text"], form input[type="password"] {
+			width:318px;
+			height:37px;
+			font-size: 1em;
+			border-radius: 5px;
+			border: 1px solid black;
+			margin-bottom: 20px;
+  			border-radius: 90px;
+		}
+		form input[type="submit"] {
+			background-color: #ce6538;
+			color: black;
+			font-size: 22px;
+			padding: 15px 78px;
+			border: 1px solid black;
+			border-radius: 20px;
+			cursor: pointer;
+		}
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			position: relative;
+			top: 0;
+			right: 0;
+			margin-top: -2000px;
+			margin-left: 950px;
+		}
+
+		li {
+			display: inline-block;
+			margin-right: 5px;
+			margin-top: 125px;
+		}
+
+		li:last-child {
+			margin-right: 0;
+		}
+
+		a {
+			color: black;
+			text-decoration: none;
+			font-size: 16px;
+			padding: 10px;
+			border-radius: 5px;
+			transition: background-color 0.3s ease;
+		}
+	</style>
+	<script>
+		function hoverButtons(buttonIds) {
+		  buttonIds.forEach(id => {
+			document.querySelector(`.button1:nth-child(${id})`).classList.add('hovered');
+		  });
+		}
+		</script>
+</head>
+<body>
+	<div class="container">
+		<form method="post" action="login.php">
+			<div style="position: relative; margin-top: 30px; margin-left: 25px;">
+				<label for="username">User Name</label>
+				<input type="text" id="username" name="username" placeholder="       User Name" style="color: gray;">
+			</div>
+			<div style="position: relative; margin-top: 20px; margin-left: 25px;">
+				<label for="password">Password</label>
+				<input type="password" id="password" name="password" placeholder="       Password" style="color: gray;">
+			</div>
+			<div style="position: relative; margin-top: 20px; margin-left:80px;">
+				<input type="submit" value="Log in">
+			</div>
+			<div style="position: relative; margin-top: 20px; margin-left: 100px;">
+				<a href="forgotpw.html">Forgotten password?</a>
+			</div>
+			<br>
+			<span>&emsp;&emsp;Don't have an account? </span>
+			<div style="position: relative; margin-top: 20px;  margin-left:80px;">
+				<button type="button" style="background-color: #3b38ce; color: black; border: 1px solid black; padding: 15px 45px; border-radius: 20px; cursor: pointer;font-size: 22px;" onclick="location.href='register.html'">Register Now</button>
+			</div>
+		</form>
+	</div>
+	<ul>
+		<li><a href="home.html"><b>Home</b></a></li>
+		<li><a href="description/about.html">About</a></li>
+		<li><a href="description/Services.html">Services</a></li>
+		<li><a href="description/WCU.html">Why Choose Us</a></li>
+		<li><a href="description/CU.html">Contact Us</a></li>
+	</ul>
+	<div class="wrapper">
+		<a href="https://www.facebook.com/" target="_blank">
+         <div class="button">
+            <div class="icon">
+				<img src="fb.png" alt="Facebook Icon">
+            </div>
+            <span>Facebook</span>
+         </div>
+		</a>
+		<a href="https://www.Instagram.com/" target="_blank">
+         <div class="button">
+            <div class="icon">
+				<img src="ins.png" alt="Instagram Icon">
+            </div>
+            <span>Instagram</span>
+         </div>
+		</a>
+		<a href="https://www.Twitter.com/" target="_blank">
+         <div class="button">
+            <div class="icon">
+				<img src="tw.png" alt="Twitter Icon">
+            </div>
+            <span>Twitter</span>
+         </div>
+		</a>
+		<a href="https://www.Youtube.com/" target="_blank">
+         <div class="button">
+            <div class="icon">
+				<img src="yt.png" alt="YouTube Icon">
+            </div>
+            <span>YouTube</span>
+         </div>
+		</a>
+      </div>
+	 <div class="wrapper1">
+			<div class="button1" onmouseover="hoverButtons(1)">
+				<a href="pricelist1.php">
+			  <div class="icon1">
+				<i class="fa fa-home"></i>
+				<img src="list.png" alt="">
+			  </div>
+			  <span>Price List</span>
+			</a>
+			</div>
+			<div class="button1" onmouseover="hoverButtons([1, 2])">
+				<a href="trackorder.html">
+			  <div class="icon1">
+				<i class="fa fa-user"></i>
+				<img src="trc.png" alt="">
+			  </div>
+			  <span>Track my parcel</span>
+			</a>
+			</div>
+			<div class="button1" onmouseover="hoverButtons([1, 2, 3])">
+				<a href="ssp.html">
+			  <div class="icon1">
+				<i class="fa fa-cog"></i>
+				<img src="spc.png" alt="">
+			  </div>
+			  <span>Send Special Package</span>
+			</div>
+		</a>
+		  </div>
+</body>
+</html>

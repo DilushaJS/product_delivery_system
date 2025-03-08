@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Remove Order</title>
+	<style>
+		body {
+			background-color: white;
+			background-image: url('back2.jpg');
+			background-size: 100%;
+			background-position: top left;
+			background-repeat: no-repeat;
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+		}
+
+		form label {
+			display: block;
+			font-size: 30px;
+			margin-bottom: 20px;
+		}
+
+		form input[type="text"]{
+			width:318px;
+			height:37px;
+			font-size: 1em;
+			border-radius: 5px;
+			border: 1px solid black;
+			margin-bottom: 20px;
+			margin-left: 30px;
+			border-radius: 90px;
+		}
+
+		form input[type="submit"]{
+			width:150px;
+			height:37px;
+			font-size: 20px;
+			border-radius: 5px;
+			border: 1px solid black;
+			margin-bottom: 20px;
+			margin-left: 100px;
+			border-radius: 90px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<h1>Remove Order</h1>
+	<div style="position: relative; margin-top: 50px; margin-left: 550px;">
+		<form method="post" action="droporder.php">
+			<label for="order_id">Order ID:</label>
+			<input type="text" id="order_id" name="order_id"><br><br>
+
+			<input type="submit" value="Remove Order">
+		</form>
+	</div>
+</body>
+</html>
